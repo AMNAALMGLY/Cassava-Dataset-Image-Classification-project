@@ -25,4 +25,4 @@ where,
   - cosine_1 which is [CosineAnnealingLR](https://pytorch.org/docs/stable/optim.html?highlight=cosineannealinglr#torch.optim.lr_scheduler.CosineAnnealingLR) 
 - FOLD_NO which is the fold number and take the values [0,1,2,3,4].
 ## Note
-before run the above command make sure to get the images from (cassava_images)[]  and put in the folder data.
+before run the above command make sure to get the images from (cassava_images)[https://www.kaggle.com/c/cassava-disease/data]  and put in the folder data.
