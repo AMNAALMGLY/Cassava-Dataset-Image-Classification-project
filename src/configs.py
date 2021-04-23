@@ -8,5 +8,5 @@ parameters = {
   "image size":448,
   'lr':1e-4,
   'rotation':30,
-  'epochs':15
+  'epochs':5
 }

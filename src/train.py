@@ -25,12 +25,14 @@ import datetime
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 MODEL_ID = ''
+FOLD_ID =''
 SCHEDULER_ID=''
 
 def run(fold, model, scheduler):
-  global MODEL_ID,SCHEDULER_ID
+  global MODEL_ID,SCHEDULER_ID,FOLD_ID
   MODEL_ID=model
   SCHEDULER_ID=scheduler
+  FOLD_ID = 'fold' + str(fold) + '_'
 
   # set the seed for reproducaility
   set_seed(2021)
@@ -120,7 +122,7 @@ def train(model, criterion, data_loader, optimizer, num_epochs,scheduler,valid_l
       print("current accu {}".format(current_accu))
       if current_accu > best_accu:
           best_accu = current_accu
-          model_path = os.path.join(path_save_model, MODEL_ID + '_' +SCHEDULER_ID + '_'+ str(best_accu)[0:4] + '.pt') 
+          model_path = os.path.join(path_save_model, FOLD_ID + MODEL_ID + '_' +SCHEDULER_ID + '_'+ str(best_accu)[0:4] + '.pt') 
           torch.save(model.state_dict(), model_path)
           best_model = model
 
