@@ -17,10 +17,12 @@ The model got **91.3%** in public leaderboard.
 
 # Getting started
 Just run this command,  
-python src/train.py --fold FOLD_NO --scheduler SCHEDULER --model MODEL
+python train.py --fold FOLD_NO --scheduler SCHEDULER --model MODEL
 where, 
 - MODEL is the model and currently can take the following values,
   - resnext_50 which is [resnext50_32x4d](https://pytorch.org/vision/stable/models.html)
 - SCHEDULER is the learning scheduler, and currently can take the following values,
   - cosine_1 which is [CosineAnnealingLR](https://pytorch.org/docs/stable/optim.html?highlight=cosineannealinglr#torch.optim.lr_scheduler.CosineAnnealingLR) 
 - FOLD_NO which is the fold number and take the values [0,1,2,3,4].
+## Note
+before run the above command make sure to get the images from (cassava_images)[]  and put in the folder data.
