@@ -15,7 +15,7 @@ class CassavaDataset(Dataset):
         """
         self.cassavaframe =dataFrame
         self.transform = transform
-        self.class_to_indice={'cmd':0,'cbb':1,'cbsd':2,'healthy':3,'cgm':4, 'no_class':-1}
+        self.class_to_indice={'cmd':0,'cbb':1,'cbsd':2,'healthy':3,'cgm':4, 'None':-1}
 
     def __len__(self):
         return len(self.cassavaframe)

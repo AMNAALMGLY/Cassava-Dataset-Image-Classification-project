@@ -1,5 +1,6 @@
 TRAIN_PATH = './data/train.csv'
 TEST_PATH  = './data/test.csv'
+SUB_PATH  = './submissions'
 KFOLD_CSV = './data/train_Kfold.csv'
 SAVE_MODEL = './models'
 
